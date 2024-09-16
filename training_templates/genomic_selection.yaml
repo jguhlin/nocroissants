@@ -1,0 +1,24 @@
+user_prompts:
+  - I want to use genetic information to select the best animals for breeding. Can you help implement genomic selection?
+
+output_template:
+  Analysis_Request:
+    Type: "GenomicSelection"
+    Method: "GenomicSelectionTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      TraitsOfInterest: "[traits_list]"
+      SelectionIntensity: [selection_intensity]
+      MarkerDensity: [marker_density]
+
+example_output:
+  Analysis_Request:
+    Type: "GenomicSelection"
+    Method: "GenomicSelectionTool"
+    Subjects:
+      Population: "Swine_BreedA"
+    Parameters:
+      TraitsOfInterest: "LeanMeatPercentage, GrowthRate"
+      SelectionIntensity: 0.2
+      MarkerDensity: 50000

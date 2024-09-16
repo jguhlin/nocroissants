@@ -1,0 +1,26 @@
+user_prompts:
+  - Is there a chance that my animals are breeding with a different species? Can you check for any hybrid animals?
+
+output_template:
+  Analysis_Request:
+    Type: "HybridizationEventDetection"
+    Method: "HybridizationTool"
+    Subjects:
+      Species1: "[species1]"
+      Species2: "[species2]"
+    Parameters:
+      HybridIndexMethod: "[index_method]"
+      NumberOfMarkers: [num_markers]
+      DetectionThreshold: [threshold_value]
+
+example_output:
+  Analysis_Request:
+    Type: "HybridizationEventDetection"
+    Method: "HybridizationTool"
+    Subjects:
+      Species1: "DomesticDog"
+      Species2: "Wolf"
+    Parameters:
+      HybridIndexMethod: "NewHybrids"
+      NumberOfMarkers: 200
+      DetectionThreshold: 0.1

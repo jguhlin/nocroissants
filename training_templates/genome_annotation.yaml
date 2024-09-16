@@ -1,0 +1,22 @@
+user_prompts:
+  - I have an assembled genome for my animal. Can you help annotate it to identify genes?
+
+output_template:
+  Analysis_Request:
+    Type: "GenomeAnnotation"
+    Method: "AnnotationTool"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      AnnotationDatabase: "[database_name]"
+      GenePredictionMethod: "[method_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "GenomeAnnotation"
+    Method: "AnnotationTool"
+    Subjects:
+      Species: "RareBirdSpecies"
+    Parameters:
+      AnnotationDatabase: "NCBI"
+      GenePredictionMethod: "Augustus"

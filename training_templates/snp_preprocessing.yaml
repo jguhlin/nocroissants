@@ -1,0 +1,34 @@
+user_prompts:
+  - I have raw sequencing data. Can you help me prepare it for variant analysis?
+  - How do I clean and align my sequencing reads before identifying SNPs?
+  - I need to process my sequencing reads for SNP calling. Can you guide me?
+  - What steps should I take to get my sequencing data ready for SNP detection?
+  - Can you assist me in pre-processing my reads for SNP analysis?
+
+output_template:
+  Analysis_Request:
+    Type: "PreprocessingReadsForSNPCalling"
+    Method: "PreprocessingTool"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      SequencingDataDescription: "[data_description]"
+      ReferenceGenome: "[reference_genome]"
+      QualityThreshold: [quality_threshold]
+      AdapterTrimming: "[Yes/No]"
+      AlignmentTool: "[alignment_tool]"
+      OutputFormat: "[output_format]"
+
+example_output:
+  Analysis_Request:
+    Type: "PreprocessingReadsForSNPCalling"
+    Method: "PreprocessingTool"
+    Subjects:
+      Species: "Maize"
+    Parameters:
+      SequencingDataDescription: "Illumina paired-end reads"
+      ReferenceGenome: "Maize_B73_RefGen_v4"
+      QualityThreshold: 20
+      AdapterTrimming: "Yes"
+      AlignmentTool: "BWA-MEM"
+      OutputFormat: "Aligned BAM files"

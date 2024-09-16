@@ -1,0 +1,22 @@
+user_prompts:
+  - I'm concerned about a virus affecting my animals. Can you monitor the viral load in the population?
+
+output_template:
+  Analysis_Request:
+    Type: "ViralLoadMonitoring"
+    Method: "VirusMonitorTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      VirusName: "[virus_name]"
+      SamplingFrequency: "[sampling_frequency]"
+
+example_output:
+  Analysis_Request:
+    Type: "ViralLoadMonitoring"
+    Method: "VirusMonitorTool"
+    Subjects:
+      Population: "BatColony_1"
+    Parameters:
+      VirusName: "Rabies"
+      SamplingFrequency: "Monthly"

@@ -1,0 +1,28 @@
+user_prompts:
+  - I'd like to understand the family relationships among my animals. Can you analyze their pedigree?
+
+output_template:
+  Analysis_Request:
+    Type: "PedigreeAnalysis"
+    Method: "PedigreeTool"
+    Subjects:
+      Individuals:
+        - "[individual1]"
+        - "[individual2]"
+        - "[individual3]"
+    Parameters:
+      PedigreeDepth: [pedigree_depth]
+      DisplayFormat: "[format_type]"
+
+example_output:
+  Analysis_Request:
+    Type: "PedigreeAnalysis"
+    Method: "PedigreeTool"
+    Subjects:
+      Individuals:
+        - "Lion_Alpha"
+        - "Lion_Beta"
+        - "Lion_Gamma"
+    Parameters:
+      PedigreeDepth: 3
+      DisplayFormat: "Graphical"

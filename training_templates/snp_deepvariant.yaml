@@ -1,0 +1,32 @@
+user_prompts:
+  - I need to identify SNPs in my sequencing data using DeepVariant. Can you help?
+  - How do I call variants using DeepVariant for my samples?
+  - Can you assist me in finding genetic variants using DeepVariant?
+  - What are the steps to perform SNP calling with DeepVariant?
+  - I'm interested in using DeepVariant for variant detection. Can you guide me?
+
+output_template:
+  Analysis_Request:
+    Type: "SNPCallingWithDeepVariant"
+    Method: "DeepVariant"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      SequencingDataDescription: "[data_description]"
+      ReferenceGenome: "[reference_genome]"
+      ModelCheckpoint: "[model_checkpoint]"
+      OutputFormat: "[output_format]"
+      OutputFileName: "[output_file_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "SNPCallingWithDeepVariant"
+    Method: "DeepVariant"
+    Subjects:
+      Species: "Rice"
+    Parameters:
+      SequencingDataDescription: "Aligned BAM files"
+      ReferenceGenome: "IRGSP-1.0"
+      ModelCheckpoint: "Standard pre-trained model"
+      OutputFormat: "VCF"
+      OutputFileName: "Rice_Sample_Variants.vcf"

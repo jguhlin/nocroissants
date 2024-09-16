@@ -1,0 +1,24 @@
+user_prompts:
+  - I want to know how much of a trait is passed from parents to offspring in my animals. Can you estimate the heritability?
+
+output_template:
+  Analysis_Request:
+    Type: "HeritabilityEstimation"
+    Method: "HeritabilityTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      TraitOfInterest: "[trait_name]"
+      StatisticalModel: "[model_type]"
+      EnvironmentalFactors: "[factors_list]"
+
+example_output:
+  Analysis_Request:
+    Type: "HeritabilityEstimation"
+    Method: "HeritabilityTool"
+    Subjects:
+      Population: "DairyCattle_Herd1"
+    Parameters:
+      TraitOfInterest: "MilkYield"
+      StatisticalModel: "AnimalModel"
+      EnvironmentalFactors: "FeedType, HousingConditions"

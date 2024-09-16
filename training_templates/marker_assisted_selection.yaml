@@ -1,0 +1,28 @@
+user_prompts:
+  - I want to select animals with the best traits for breeding. Can you help me identify them using genetic markers?
+
+output_template:
+  Analysis_Request:
+    Type: "MarkerAssistedSelection"
+    Method: "SelectionTool"
+    Subjects:
+      Individuals:
+        - "[individual1]"
+        - "[individual2]"
+        - "[individual3]"
+    Parameters:
+      TraitsOfInterest: "[traits_list]"
+      SelectionThreshold: [selection_threshold]
+
+example_output:
+  Analysis_Request:
+    Type: "MarkerAssistedSelection"
+    Method: "SelectionTool"
+    Subjects:
+      Individuals:
+        - "Sheep_201"
+        - "Sheep_202"
+        - "Sheep_203"
+    Parameters:
+      TraitsOfInterest: "WoolQuality, GrowthRate"
+      SelectionThreshold: 0.8

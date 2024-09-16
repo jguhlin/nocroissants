@@ -1,0 +1,24 @@
+user_prompts:
+  - Can you help identify the specific genes affecting important traits in my animals?
+
+output_template:
+  Analysis_Request:
+    Type: "QTLMapping"
+    Method: "QtlMappingTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      TraitOfInterest: "[trait_name]"
+      MappingPopulationType: "[population_type]"
+      StatisticalMethod: "[method_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "QTLMapping"
+    Method: "QtlMappingTool"
+    Subjects:
+      Population: "Corn_VarietyX"
+    Parameters:
+      TraitOfInterest: "DroughtTolerance"
+      MappingPopulationType: "F2"
+      StatisticalMethod: "CompositeIntervalMapping"

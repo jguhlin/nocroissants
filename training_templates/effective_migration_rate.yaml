@@ -1,0 +1,26 @@
+user_prompts:
+  - Can you estimate how much gene flow is happening between my animal populations?
+
+output_template:
+  Analysis_Request:
+    Type: "EffectiveMigrationRateEstimation"
+    Method: "MigrationRateTool"
+    Subjects:
+      Populations:
+        - "[Population_A]"
+        - "[Population_B]"
+    Parameters:
+      TimeScale: [time_scale_years]
+      MarkersUsed: "[markers_list]"
+
+example_output:
+  Analysis_Request:
+    Type: "EffectiveMigrationRateEstimation"
+    Method: "MigrationRateTool"
+    Subjects:
+      Populations:
+        - "ButterflyPopulation_North"
+        - "ButterflyPopulation_South"
+      Parameters:
+        TimeScale: 10
+        MarkersUsed: "Microsatellites"

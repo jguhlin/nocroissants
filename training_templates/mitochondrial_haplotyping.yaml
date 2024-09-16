@@ -1,0 +1,28 @@
+user_prompts:
+  - Can you analyze the maternal lineage of my animals to see how they're related through their mothers?
+
+output_template:
+  Analysis_Request:
+    Type: "MitochondrialDNAHaplotyping"
+    Method: "MtDNATool"
+    Subjects:
+      Individuals:
+        - "[individual1]"
+        - "[individual2]"
+        - "[individual3]"
+    Parameters:
+      HaplogroupClassification: "[Yes/No]"
+      ReferenceDatabase: "[database_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "MitochondrialDNAHaplotyping"
+    Method: "MtDNATool"
+    Subjects:
+      Individuals:
+        - "Elephant_Calf_A"
+        - "Elephant_Calf_B"
+        - "Elephant_Calf_C"
+    Parameters:
+      HaplogroupClassification: "Yes"
+      ReferenceDatabase: "ElephantMtDNARef"

@@ -1,0 +1,26 @@
+user_prompts:
+    - I'm planning to mate two of my animals, \#NAME1 and \#NAME2. Can you tell me if there's a risk of inbreeding problems?
+
+output_template:
+  Analysis_Request:
+    Type: "InbreedingCoefficientPrediction"
+    Method: "Endog"
+    Subjects:
+      Parents:
+        - "Parent1": "NAME1"
+        - "Parent2": "NAME2"
+    Parameters:
+      PedigreeDepth: [pedigree_depth]
+      IncludeMolecularData: "[Yes/No]"
+
+example_output:
+  Analysis_Request:
+    Type: "InbreedingCoefficientPrediction"
+    Method: "Endog"
+    Subjects:
+      Parents:
+        - "Parent1": "NAME1"
+        - "Parent2": "NAME2"
+    Parameters:
+      PedigreeDepth: 4
+      IncludeMolecularData: "Yes"

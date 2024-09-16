@@ -1,0 +1,28 @@
+user_prompts:
+  - Can you assess the long-term survival chances of my animal population?
+
+output_template:
+  Analysis_Request:
+    Type: "PopulationViabilityAnalysis"
+    Method: "PvaTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      TimeHorizon: [years]
+      InitialPopulationSize: [initial_size]
+      ReproductionRate: [reproduction_rate]
+      MortalityRate: [mortality_rate]
+      EnvironmentalVariability: "[Yes/No]"
+
+example_output:
+  Analysis_Request:
+    Type: "PopulationViabilityAnalysis"
+    Method: "PvaTool"
+    Subjects:
+      Population: "EaglePopulation_North"
+    Parameters:
+      TimeHorizon: 100
+      InitialPopulationSize: 50
+      ReproductionRate: 1.2
+      MortalityRate: 0.1
+      EnvironmentalVariability: "Yes"

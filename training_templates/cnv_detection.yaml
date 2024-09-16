@@ -1,0 +1,28 @@
+user_prompts:
+  - I'm interested in any large genetic changes in my animals' DNA that could affect their traits. Can you check for these?
+
+output_template:
+  Analysis_Request:
+    Type: "CopyNumberVariationDetection"
+    Method: "CNVTool"
+    Subjects:
+      Individuals:
+        - "[individual1]"
+        - "[individual2]"
+        - "[individual3]"
+    Parameters:
+      MinimumCNVSize: [cnv_size]
+      DetectionThreshold: [detection_threshold]
+
+example_output:
+  Analysis_Request:
+    Type: "CopyNumberVariationDetection"
+    Method: "CNVTool"
+    Subjects:
+      Individuals:
+        - "Gorilla_Alpha"
+        - "Gorilla_Beta"
+        - "Gorilla_Gamma"
+    Parameters:
+      MinimumCNVSize: 1000
+      DetectionThreshold: 0.05

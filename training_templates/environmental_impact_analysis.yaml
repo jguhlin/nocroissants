@@ -1,0 +1,22 @@
+user_prompts:
+  - How might environmental changes affect the genetics of my animal population over time?
+
+output_template:
+  Analysis_Request:
+    Type: "EnvironmentalImpactAnalysis"
+    Method: "EnvImpactTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      EnvironmentalFactors: "[factors_list]"
+      TimeFrame: [time_frame_years]
+
+example_output:
+  Analysis_Request:
+    Type: "EnvironmentalImpactAnalysis"
+    Method: "EnvImpactTool"
+    Subjects:
+      Population: "PolarBears"
+    Parameters:
+      EnvironmentalFactors: "TemperatureRise, SeaIceLoss"
+      TimeFrame: 20

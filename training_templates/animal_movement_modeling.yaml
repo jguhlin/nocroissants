@@ -1,0 +1,24 @@
+user_prompts:
+  - I'd like to understand how animals move across the landscape. Can you model their movements?
+
+output_template:
+  Analysis_Request:
+    Type: "AnimalMovementModeling"
+    Method: "MovementModelTool"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      LandscapeFeatures: "[features_list]"
+      MovementData: "[data_description]"
+      TimeFrame: [time_frame_years]
+
+example_output:
+  Analysis_Request:
+    Type: "AnimalMovementModeling"
+    Method: "MovementModelTool"
+    Subjects:
+      Species: "MountainGoat"
+    Parameters:
+      LandscapeFeatures: "Elevation, VegetationType"
+      MovementData: "GPSCollarData"
+      TimeFrame: 2

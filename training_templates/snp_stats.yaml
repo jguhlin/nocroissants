@@ -1,0 +1,30 @@
+user_prompts:
+  - Can you help me generate statistics for my identified SNPs?
+  - I'd like to analyze the quality and distribution of my SNP calls. Can you assist?
+  - How do I obtain summary statistics for my SNP data?
+  - I want to understand the characteristics of my SNPs. Can you provide statistical analysis?
+  - Can you help me with generating SNP statistics like allele frequencies and heterozygosity?
+
+output_template:
+  Analysis_Request:
+    Type: "SNPStatisticsGeneration"
+    Method: "SNPStatsTool"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      SNPDataDescription: "[snp_data_description]"
+      StatisticsToCalculate: "[statistics_list]"
+      OutputFormat: "[output_format]"
+      OutputFileName: "[output_file_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "SNPStatisticsGeneration"
+    Method: "SNPStatsTool"
+    Subjects:
+      Species: "Arabidopsis"
+    Parameters:
+      SNPDataDescription: "VCF file from SNP calling"
+      StatisticsToCalculate: "Allele frequency, Heterozygosity, Transition/Transversion ratio"
+      OutputFormat: "Summary report"
+      OutputFileName: "Arabidopsis_SNP_Statistics.txt"

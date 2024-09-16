@@ -1,0 +1,22 @@
+user_prompts:
+  - Has my animal population gone through a recent bottleneck? Can you detect this?
+
+output_template:
+  Analysis_Request:
+    Type: "BottleneckDetection"
+    Method: "BottleneckTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      MutationModel: "[mutation_model]"
+      SignificanceLevel: [significance_level]
+
+example_output:
+  Analysis_Request:
+    Type: "BottleneckDetection"
+    Method: "BottleneckTool"
+    Subjects:
+      Population: "ElephantHerd_Z"
+    Parameters:
+      MutationModel: "Two-Phase Model"
+      SignificanceLevel: 0.05

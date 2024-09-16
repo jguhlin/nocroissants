@@ -1,0 +1,22 @@
+user_prompts:
+  - How resilient is my animal population to climate change? Can you assess their genetic capacity to adapt?
+
+output_template:
+  Analysis_Request:
+    Type: "ClimateChangeResilienceAssessment"
+    Method: "ResilienceTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      ClimateModels: "[models_list]"
+      TimeHorizon: [years]
+
+example_output:
+  Analysis_Request:
+    Type: "ClimateChangeResilienceAssessment"
+    Method: "ResilienceTool"
+    Subjects:
+      Population: "CoralReef_ZoneA"
+    Parameters:
+      ClimateModels: "RCP4.5, RCP8.5"
+      TimeHorizon: 50

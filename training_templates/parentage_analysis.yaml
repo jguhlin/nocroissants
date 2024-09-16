@@ -1,0 +1,37 @@
+user_prompts:
+  - I need to determine the parents of some offspring in my breeding program. Can you help identify them?
+
+output_template:
+  Analysis_Request:
+    Type: "ParentageAnalysis"
+    Method: "ParentageTool"
+    Subjects:
+      Offspring:
+        - "[offspring1]"
+        - "[offspring2]"
+        - "[offspring3]"
+      PotentialParents:
+        - "[parent1]"
+        - "[parent2]"
+        - "[parent3]"
+    Parameters:
+      MismatchTolerance: [number_of_allowed_mismatches]
+      ConfidenceLevel: [confidence_level]
+
+example_output:
+  Analysis_Request:
+    Type: "ParentageAnalysis"
+    Method: "ParentageTool"
+    Subjects:
+      Offspring:
+        - "Calf_001"
+        - "Calf_002"
+        - "Calf_003"
+      PotentialParents:
+        - "Bull_A"
+        - "Bull_B"
+        - "Cow_X"
+        - "Cow_Y"
+    Parameters:
+      MismatchTolerance: 1
+      ConfidenceLevel: 95

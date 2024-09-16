@@ -1,0 +1,22 @@
+user_prompts:
+  - I'd like to see how certain genetic variants in my population have changed over time. Can you analyze this?
+
+output_template:
+  Analysis_Request:
+    Type: "AlleleFrequencyChange"
+    Method: "AlleleFreqTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      TimePoints: "[time_points]"
+      MarkersOfInterest: "[markers_list]"
+
+example_output:
+  Analysis_Request:
+    Type: "AlleleFrequencyChange"
+    Method: "AlleleFreqTool"
+    Subjects:
+      Population: "RabbitColony_Alpha"
+    Parameters:
+      TimePoints: "2010, 2015, 2020"
+      MarkersOfInterest: "GeneA, GeneB, GeneC"

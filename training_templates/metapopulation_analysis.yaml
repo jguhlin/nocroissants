@@ -1,0 +1,28 @@
+user_prompts:
+  - I'd like to understand how my separated animal groups function as a whole. Can you perform a metapopulation analysis?
+
+output_template:
+  Analysis_Request:
+    Type: "MetapopulationAnalysis"
+    Method: "MetapopTool"
+    Subjects:
+      Populations:
+        - "[Population_A]"
+        - "[Population_B]"
+        - "[Population_C]"
+    Parameters:
+      ConnectivityMeasures: "[measures_list]"
+      LocalExtinctionRates: "[rates_list]"
+
+example_output:
+  Analysis_Request:
+    Type: "MetapopulationAnalysis"
+    Method: "MetapopTool"
+    Subjects:
+      Populations:
+        - "FrogPond_1"
+        - "FrogPond_2"
+        - "FrogPond_3"
+      Parameters:
+        ConnectivityMeasures: "MigrationRates"
+        LocalExtinctionRates: "[0.1, 0.05, 0.2]"

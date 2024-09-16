@@ -1,0 +1,24 @@
+user_prompts:
+  - I want to find the best areas to release some animals back into the wild. Can you help identify suitable habitats?
+
+output_template:
+  Analysis_Request:
+    Type: "HabitatSuitabilityModeling"
+    Method: "HabitatModelTool"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      EnvironmentalVariables: "[variables_list]"
+      OccurrenceRecords: [number_of_records]
+      ModelAlgorithm: "[algorithm_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "HabitatSuitabilityModeling"
+    Method: "HabitatModelTool"
+    Subjects:
+      Species: "RedPanda"
+    Parameters:
+      EnvironmentalVariables: "Temperature, Precipitation, Vegetation"
+      OccurrenceRecords: 150
+      ModelAlgorithm: "MaxEnt"

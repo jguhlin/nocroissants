@@ -1,0 +1,24 @@
+user_prompts:
+  - How genetically different are my animal populations from each other? Can you calculate the genetic distance?
+
+output_template:
+  Analysis_Request:
+    Type: "GeneticDistanceCalculation"
+    Method: "GeneticDistanceTool"
+    Subjects:
+      Populations:
+        - "[Population_A]"
+        - "[Population_B]"
+    Parameters:
+      DistanceMetric: "[metric_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "GeneticDistanceCalculation"
+    Method: "GeneticDistanceTool"
+    Subjects:
+      Populations:
+        - "FishPopulation_Lake1"
+        - "FishPopulation_Lake2"
+      Parameters:
+        DistanceMetric: "Nei's Genetic Distance"

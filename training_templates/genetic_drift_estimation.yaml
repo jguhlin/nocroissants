@@ -1,0 +1,22 @@
+user_prompts:
+  - Over time, I'm concerned that my small animal population might be losing genetic diversity. Can you estimate the effects of genetic drift?
+
+output_template:
+  Analysis_Request:
+    Type: "GeneticDriftEstimation"
+    Method: "GeneticDriftTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      TimePeriods: [number_of_periods]
+      PopulationSizeOverTime: [population_sizes]
+
+example_output:
+  Analysis_Request:
+    Type: "GeneticDriftEstimation"
+    Method: "GeneticDriftTool"
+    Subjects:
+      Population: "Island_Foxes"
+    Parameters:
+      TimePeriods: 5
+      PopulationSizeOverTime: [100, 80, 60, 50, 45]

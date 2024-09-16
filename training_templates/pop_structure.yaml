@@ -1,0 +1,20 @@
+user_prompts:
+    - I'd like to find out if my animal population is divided into different genetic groups. Can you help me with this?
+
+output_template:
+  Analysis_Request:
+  Type: "PopulationStructureAnalysis"
+  Method: "STRUCTURE"
+  Parameters:
+    NumberOfPopulations: [K_value]
+    BurnInPeriod: [burn_in_period]
+    MCMCRepetitions: [mcmc_reps]
+
+example_output:
+  Analysis_Request:
+    Type: "PopulationStructureAnalysis"
+    Method: "STRUCTURE"
+    Parameters:
+      NumberOfPopulations: 2
+      BurnInPeriod: 10000
+      MCMCRepetitions: 50000

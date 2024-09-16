@@ -1,0 +1,22 @@
+user_prompts:
+  - Are there any traits in my animals that are helping them adapt to their environment? Can you identify these?
+
+output_template:
+  Analysis_Request:
+    Type: "AdaptiveTraitAnalysis"
+    Method: "AdaptationTool"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      EnvironmentalVariables: "[variables_list]"
+      TraitData: "[trait_data_description]"
+
+example_output:
+  Analysis_Request:
+    Type: "AdaptiveTraitAnalysis"
+    Method: "AdaptationTool"
+    Subjects:
+      Species: "Salmon"
+    Parameters:
+      EnvironmentalVariables: "WaterTemperature, Salinity"
+      TraitData: "MigrationTiming"

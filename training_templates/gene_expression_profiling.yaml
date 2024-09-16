@@ -1,0 +1,28 @@
+user_prompts:
+  - I'd like to understand which genes are active in my animals under certain conditions. Can you analyze this?
+
+output_template:
+  Analysis_Request:
+    Type: "GeneExpressionProfiling"
+    Method: "ExpressionTool"
+    Subjects:
+      Individuals:
+        - "[individual1]"
+        - "[individual2]"
+        - "[individual3]"
+    Parameters:
+      Condition: "[condition_name]"
+      ExpressionThreshold: [expression_threshold]
+
+example_output:
+  Analysis_Request:
+    Type: "GeneExpressionProfiling"
+    Method: "ExpressionTool"
+    Subjects:
+      Individuals:
+        - "Frog_A"
+        - "Frog_B"
+        - "Frog_C"
+    Parameters:
+      Condition: "HighAltitude"
+      ExpressionThreshold: 1.5

@@ -1,0 +1,25 @@
+user_prompts:
+  - I'd like to know how many breeding animals are effectively contributing to the next generation in my population.
+
+output_template:
+  Analysis_Request:
+    Type: "EffectivePopulationSizeEstimation"
+    Method: "NeEstimator"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      UseTemporalMethod: "[Yes/No]"
+      SingleSampleEstimator: "[estimator_name]"
+      ConfidenceInterval: [confidence_level]
+
+
+example_output:
+  Analysis_Request:
+    Type: "EffectivePopulationSizeEstimation"
+    Method: "NeEstimator"
+    Subjects:
+      Population: "Buffalo_Herd"
+    Parameters:
+      UseTemporalMethod: "No"
+      SingleSampleEstimator: "LD"
+      ConfidenceInterval: 95

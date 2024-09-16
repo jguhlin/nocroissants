@@ -1,0 +1,26 @@
+user_prompts:
+  - I have limited resources. Which of my animal populations should be prioritized for conservation efforts?
+
+output_template:
+  Analysis_Request:
+    Type: "ConservationPriorityAssessment"
+    Method: "PriorityTool"
+    Subjects:
+      Populations:
+        - "[Population_A]"
+        - "[Population_B]"
+        - "[Population_C]"
+    Parameters:
+      Criteria: "[criteria_list]"
+
+example_output:
+  Analysis_Request:
+    Type: "ConservationPriorityAssessment"
+    Method: "PriorityTool"
+    Subjects:
+      Populations:
+        - "Turtle_Nest_A"
+        - "Turtle_Nest_B"
+        - "Turtle_Nest_C"
+    Parameters:
+      Criteria: "GeneticDiversity, PopulationSize, ThreatLevel"

@@ -1,0 +1,24 @@
+user_prompts:
+  - Could genes from another species be mixing into my animal population? Can you check for this?
+
+output_template:
+  Analysis_Request:
+    Type: "IntrogressionAnalysis"
+    Method: "IntrogressionTool"
+    Subjects:
+      TargetSpecies: "[species_name]"
+      SourceSpecies: "[source_species]"
+    Parameters:
+      DetectionMethod: "[method_name]"
+      SignificanceThreshold: [threshold_value]
+
+example_output:
+  Analysis_Request:
+    Type: "IntrogressionAnalysis"
+    Method: "IntrogressionTool"
+    Subjects:
+      TargetSpecies: "WildCat"
+      SourceSpecies: "DomesticCat"
+    Parameters:
+      DetectionMethod: "DStatistic"
+      SignificanceThreshold: 0.05

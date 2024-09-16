@@ -1,0 +1,26 @@
+user_prompts:
+  - I'd like to know how closely related some of my animals are. Can you calculate their genetic relatedness?
+
+output_template:
+  Analysis_Request:
+    Type: "GeneticRelatednessEstimation"
+    Method: "RelatednessTool"
+    Subjects:
+      Individuals:
+        - "[individual1]"
+        - "[individual2]"
+        - "[individual3]"
+    Parameters:
+      RelatednessCoefficient: "[coefficient_type]"
+
+example_output:
+  Analysis_Request:
+    Type: "GeneticRelatednessEstimation"
+    Method: "RelatednessTool"
+    Subjects:
+      Individuals:
+        - "Sheep_101"
+        - "Sheep_102"
+        - "Sheep_103"
+    Parameters:
+      RelatednessCoefficient: "KinshipCoefficient"

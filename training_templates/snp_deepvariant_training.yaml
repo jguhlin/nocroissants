@@ -1,0 +1,34 @@
+user_prompts:
+  - I want to improve SNP calling for my species using DeepVariant. Can you help me train the model?
+  - How can I train DeepVariant with my own data to get better variant calls?
+  - I have high-quality sequencing data. Can you assist me in training DeepVariant for SNP detection?
+  - What's the process to customize DeepVariant for my organism?
+  - Can you guide me in training DeepVariant using my reference genome?
+
+output_template:
+  Analysis_Request:
+    Type: "TrainingDeepVariant"
+    Method: "DeepVariantTraining"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      TrainingDataDescription: "[training_data_description]"
+      ReferenceGenome: "[reference_genome]"
+      Hyperparameters: "[hyperparameter_settings]"
+      NumberOfEpochs: [number_of_epochs]
+      ValidationDataDescription: "[validation_data_description]"
+      OutputModel: "[output_model_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "TrainingDeepVariant"
+    Method: "DeepVariantTraining"
+    Subjects:
+      Species: "Wheat"
+    Parameters:
+      TrainingDataDescription: "High-coverage whole-genome sequencing data"
+      ReferenceGenome: "IWGSC RefSeq v1.0"
+      Hyperparameters: "Default settings"
+      NumberOfEpochs: 10
+      ValidationDataDescription: "Independent dataset from different cultivars"
+      OutputModel: "DeepVariant_Wheat_Model"

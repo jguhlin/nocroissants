@@ -1,0 +1,22 @@
+user_prompts:
+  - Are there interactions between different genes affecting traits in my animals? Can you detect these interactions?
+
+output_template:
+  Analysis_Request:
+    Type: "EpistasisDetection"
+    Method: "EpistasisTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      TraitsOfInterest: "[traits_list]"
+      StatisticalThreshold: [threshold_value]
+
+example_output:
+  Analysis_Request:
+    Type: "EpistasisDetection"
+    Method: "EpistasisTool"
+    Subjects:
+      Population: "Soybean_Population1"
+    Parameters:
+      TraitsOfInterest: "Yield, DiseaseResistance"
+      StatisticalThreshold: 0.05

@@ -1,0 +1,32 @@
+user_prompts:
+  - Can you create a phylogenetic tree to show how my animals are related to each other?
+
+output_template:
+  Analysis_Request:
+    Type: "PhylogeneticTreeConstruction"
+    Method: "PhylogenyTool"
+    Subjects:
+      Individuals:
+        - "individual1"
+        - "individual2"
+        - "individual3"
+    Parameters:
+      TreeBuildingAlgorithm: "[algorithm_name]"
+      BootstrapIterations: [bootstrap_value]
+      OutgroupSpecies: "[outgroup_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "PhylogeneticTreeConstruction"
+    Method: "PhylogenyTool"
+    Subjects:
+      Individuals:
+        - "Bird_A"
+        - "Bird_B"
+        - "Bird_C"
+    Parameters:
+      TreeBuildingAlgorithm: "MaximumLikelihood"
+      BootstrapIterations: 100
+      OutgroupSpecies: "Sparrow"
+
+

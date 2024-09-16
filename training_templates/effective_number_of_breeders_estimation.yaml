@@ -1,0 +1,22 @@
+user_prompts:
+  - How many of my animals are actually contributing genes to the next generation in a single breeding season?
+
+output_template:
+  Analysis_Request:
+    Type: "EffectiveNumberOfBreedersEstimation"
+    Method: "NbEstimator"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      TemporalMethod: "[Yes/No]"
+      ConfidenceInterval: [confidence_level]
+
+example_output:
+  Analysis_Request:
+    Type: "EffectiveNumberOfBreedersEstimation"
+    Method: "NbEstimator"
+    Subjects:
+      Population: "SalmonRun_RiverX"
+    Parameters:
+      TemporalMethod: "Yes"
+      ConfidenceInterval: 95

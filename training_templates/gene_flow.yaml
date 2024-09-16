@@ -1,0 +1,28 @@
+user_prompts:
+  - I have two groups of animals, and I want to know if they're interbreeding. Can you estimate the gene flow between \#NAME1 and \#NAME2?
+
+output_template:
+  Analysis_Request:
+    Type: "GeneFlowEstimation"
+    Method: "GeneFlowTool"
+    Subjects:
+      Populations:
+        - "PopulationA": "[#NAME1]"
+        - "PopulationB": "[#NAME2]"
+    Parameters:
+      MigrationModel: "[migration_model]"
+      NumberOfMarkers: [num_markers]
+      GenerationTime: [generation_time]
+
+example_output:
+  Analysis_Request:
+    Type: "GeneFlowEstimation"
+    Method: "GeneFlowTool"
+    Subjects:
+      Populations:
+        - "PopulationA": "#NAME1"
+        - "PopulationB": "#NAME2"
+    Parameters:
+      MigrationModel: "Island"
+      NumberOfMarkers: 50
+      GenerationTime: 5

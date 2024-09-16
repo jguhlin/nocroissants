@@ -1,0 +1,28 @@
+user_prompts:
+  - Can introducing new individuals improve the genetics of my population? Can you assess the potential for genetic rescue?
+
+output_template:
+  Analysis_Request:
+    Type: "GeneticRescueAssessment"
+    Method: "RescueTool"
+    Subjects:
+      TargetPopulation: "[population_name]"
+      CandidateIndividuals:
+        - "[individual1]"
+        - "[individual2]"
+    Parameters:
+      GeneticDiversityMetrics: "[metrics_list]"
+      RiskAssessment: "[Yes/No]"
+
+example_output:
+  Analysis_Request:
+    Type: "GeneticRescueAssessment"
+    Method: "RescueTool"
+    Subjects:
+      TargetPopulation: "TigerPopulation_South"
+      CandidateIndividuals:
+        - "Tiger_Male_X"
+        - "Tiger_Female_Y"
+      Parameters:
+        GeneticDiversityMetrics: "Heterozygosity, AllelicRichness"
+        RiskAssessment: "Yes"

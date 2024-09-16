@@ -1,0 +1,28 @@
+user_prompts:
+  - I'm worried that some of my animals might be at risk for certain diseases. Can you predict which ones might be susceptible?
+
+output_template:
+  Analysis_Request:
+    Type: "DiseaseSusceptibilityPrediction"
+    Method: "DiseaseRiskTool"
+    Subjects:
+      Individuals:
+        - "[individual1]"
+        - "[individual2]"
+        - "[individual3]"
+    Parameters:
+      DiseaseOfInterest: "[disease_name]"
+      RiskThreshold: [risk_threshold]
+
+example_output:
+  Analysis_Request:
+    Type: "DiseaseSusceptibilityPrediction"
+    Method: "DiseaseRiskTool"
+    Subjects:
+      Individuals:
+        - "Cow_101"
+        - "Cow_102"
+        - "Cow_103"
+    Parameters:
+      DiseaseOfInterest: "Bovine Tuberculosis"
+      RiskThreshold: 0.7

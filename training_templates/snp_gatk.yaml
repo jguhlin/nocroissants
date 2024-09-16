@@ -1,0 +1,32 @@
+user_prompts:
+  - I'd like to identify SNPs using GATK. Can you guide me through the process?
+  - How can I use GATK to find genetic variants in my data?
+  - I need assistance with SNP calling using GATK for my samples.
+  - Can you help me perform variant calling with GATK?
+  - What steps are involved in SNP detection using GATK?
+
+output_template:
+  Analysis_Request:
+    Type: "SNPCallingWithGATK"
+    Method: "GATK"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      SequencingDataDescription: "[data_description]"
+      ReferenceGenome: "[reference_genome]"
+      GATKVersion: "[gatk_version]"
+      OutputFormat: "[output_format]"
+      OutputFileName: "[output_file_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "SNPCallingWithGATK"
+    Method: "GATK"
+    Subjects:
+      Species: "Soybean"
+    Parameters:
+      SequencingDataDescription: "Aligned BAM files"
+      ReferenceGenome: "Glyma2.0"
+      GATKVersion: "4.1.9.0"
+      OutputFormat: "VCF"
+      OutputFileName: "Soybean_Sample_Variants.vcf"

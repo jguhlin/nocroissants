@@ -1,0 +1,24 @@
+user_prompts:
+  - I want to find genetic factors associated with a specific trait in my animals. Can you perform an analysis for this?
+
+output_template:
+  Analysis_Request:
+    Type: "GenomeWideAssociationStudy"
+    Method: "GWASTool"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      TraitOfInterest: "[trait_name]"
+      SignificanceThreshold: [p_value_threshold]
+      CorrectionMethod: "[correction_method]"
+
+example_output:
+  Analysis_Request:
+    Type: "GenomeWideAssociationStudy"
+    Method: "GWASTool"
+    Subjects:
+      Species: "Horse"
+    Parameters:
+      TraitOfInterest: "Speed"
+      SignificanceThreshold: 0.0001
+      CorrectionMethod: "Bonferroni"

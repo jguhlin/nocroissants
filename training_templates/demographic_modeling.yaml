@@ -1,0 +1,24 @@
+user_prompts:
+  - Can you model the population size changes over time for my animal population?
+
+output_template:
+  Analysis_Request:
+    Type: "DemographicModeling"
+    Method: "DemographyTool"
+    Subjects:
+      Population: "[population_name]"
+    Parameters:
+      HistoricalEvents: "[events_description]"
+      TimeScale: [time_scale_years]
+      MutationRate: [mutation_rate]
+
+example_output:
+  Analysis_Request:
+    Type: "DemographicModeling"
+    Method: "DemographyTool"
+    Subjects:
+      Population: "WhalePopulation_A"
+    Parameters:
+      HistoricalEvents: "Bottleneck during 1800s whaling"
+      TimeScale: 200
+      MutationRate: 1e-8

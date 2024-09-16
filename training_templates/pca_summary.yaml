@@ -1,0 +1,20 @@
+user_prompts:
+    - I want to understand how genetically diverse my animals are. Can you analyze their genetic differences and provide a summary?
+
+output_template:
+    Analysis_Request:
+        Type: "GeneticDiversityAnalysis"
+        Method: "PCA"
+        Parameters:
+            NumberOfComponents: [num_components]
+            MissingDataThreshold: [missing_data_threshold]
+            ScalingMethod: "[scaling_method]"
+
+example_output:
+    Analysis_Request:
+        Type: "GeneticDiversityAnalysis"
+        Method: "PCA"
+        Parameters:
+            NumberOfComponents: 3
+            MissingDataThreshold: 0.1
+            ScalingMethod: "Standardization"

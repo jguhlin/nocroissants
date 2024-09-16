@@ -1,0 +1,26 @@
+user_prompts:
+  - Are there any important genetic traits that are being naturally selected in my animal population?
+
+output_template:
+  Analysis_Request:
+    Type: "SelectionSignatureDetection"
+    Method: "SelectionTool"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      DetectionMethod: "[method_name]"
+      SignificanceThreshold: [threshold_value]
+      WindowSize: [window_size]
+
+
+example_output:
+  Analysis_Request:
+    Type: "SelectionSignatureDetection"
+    Method: "SelectionTool"
+    Subjects:
+      Species: "GrizzlyBear"
+    Parameters:
+      DetectionMethod: "iHS"
+      SignificanceThreshold: 0.05
+      WindowSize: 100
+

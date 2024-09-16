@@ -1,0 +1,22 @@
+user_prompts:
+  - I have sequencing data for my animal. Can you help assemble its genome?
+
+output_template:
+  Analysis_Request:
+    Type: "GenomeAssembly"
+    Method: "AssemblyTool"
+    Subjects:
+      Species: "[species_name]"
+    Parameters:
+      SequencingPlatform: "[platform_name]"
+      CoverageDepth: [coverage_depth]
+
+example_output:
+  Analysis_Request:
+    Type: "GenomeAssembly"
+    Method: "AssemblyTool"
+    Subjects:
+      Species: "RareBirdSpecies"
+    Parameters:
+      SequencingPlatform: "Illumina"
+      CoverageDepth: 30
