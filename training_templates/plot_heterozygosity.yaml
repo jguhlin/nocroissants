@@ -1,0 +1,16 @@
+user_prompts:
+  - Can you plot heterozygosity of the samples?
+
+output_template:
+  Analysis_Request:
+    Type: "HeterozygosityAnalysis"
+    Method: "HeterozygosityTool"
+    Subjects:
+      Species: "[species_name]"
+
+example_output:
+  Analysis_Request:
+    Type: "HeterozygosityAnalysis"
+    Method: "HeterozygosityTool"
+    Subjects:
+      Species: "Salmon"
